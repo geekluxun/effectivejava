@@ -5,6 +5,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 // Reusable forwarding class (Page 90)
+
+/**
+ * 可重用的转发类（装饰者模式）
+ *
+ * @param <E>
+ */
 public class ForwardingSet<E> implements Set<E> {
     private final Set<E> s;
 

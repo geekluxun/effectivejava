@@ -7,6 +7,9 @@ import java.io.IOException;
 public class TopLine {
     // try-finally - No longer the best way to close resources! (page 34)
     static String firstLineOfFile(String path) throws IOException {
+        /**
+         * 这里使用了装饰者模式
+         */
         BufferedReader br = new BufferedReader(new FileReader(path));
         try {
             return br.readLine();

@@ -1,6 +1,10 @@
 package com.geekluxun.effectivejava.chapter4.item23.taggedclass;
 
 // Tagged class - vastly inferior to a class hierarchy! (Page 109)
+
+/**
+ * 类层次优于标签类
+ */
 class Figure {
     enum Shape {RECTANGLE, CIRCLE}
 

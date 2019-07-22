@@ -3,6 +3,9 @@ package com.geekluxun.effectivejava.chapter2.item6;
 // Hideously slow program! Can you spot the object creation? (Page 24)
 public class Sum {
     private static long sum() {
+        /**
+         * 这里计算的时候涉及到装箱拆箱的过程，比较昂贵
+         */
         Long sum = 0L;
         for (long i = 0; i <= Integer.MAX_VALUE; i++)
             sum += i;

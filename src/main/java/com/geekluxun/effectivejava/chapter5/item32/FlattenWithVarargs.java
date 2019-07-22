@@ -5,6 +5,12 @@ import java.util.List;
 
 // Safe method with a generic varargs parameter (page 149)
 public class FlattenWithVarargs {
+    /**
+     * 使用@SafeVarargs承诺是类型安全的
+     * @param lists
+     * @param <T>
+     * @return
+     */
     @SafeVarargs
     static <T> List<T> flatten(List<? extends T>... lists) {
         List<T> result = new ArrayList<>();

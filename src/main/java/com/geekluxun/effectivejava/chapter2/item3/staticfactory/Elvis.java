@@ -7,6 +7,11 @@ public class Elvis {
     private Elvis() {
     }
 
+    /**
+     * 静态工厂
+     *
+     * @return
+     */
     public static Elvis getInstance() {
         return INSTANCE;
     }

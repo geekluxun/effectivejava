@@ -11,7 +11,7 @@ public abstract class AbstractMapEntry<K, V>
     public V setValue(V value) {
         throw new UnsupportedOperationException();
     }
-
+    
     // Implements the general contract of Map.Entry.equals
     @Override
     public boolean equals(Object o) {

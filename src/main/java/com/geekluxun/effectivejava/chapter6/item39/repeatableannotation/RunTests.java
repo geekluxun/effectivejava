@@ -36,6 +36,9 @@ public class RunTests {
                 } catch (Throwable wrappedExc) {
                     Throwable exc = wrappedExc.getCause();
                     int oldPassed = passed;
+                    /**
+                     * 区别getAnnotation
+                     */
                     ExceptionTest[] excTests =
                             m.getAnnotationsByType(ExceptionTest.class);
                     for (ExceptionTest excTest : excTests) {

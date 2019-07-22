@@ -57,10 +57,14 @@ class Plant {
         System.out.println(plantsByLifeCycle);
 
         // Naive stream-based approach - unlikely to produce an EnumMap!  (Page 172)
+
         System.out.println(Arrays.stream(garden)
                 .collect(groupingBy(p -> p.lifeCycle)));
 
         // Using a stream and an EnumMap to associate data with an enum (Page 173)
+        /**
+         * groupingBy ??
+         */
         System.out.println(Arrays.stream(garden)
                 .collect(groupingBy(p -> p.lifeCycle,
                         () -> new EnumMap<>(LifeCycle.class), toSet())));

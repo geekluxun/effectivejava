@@ -1,6 +1,10 @@
 package com.geekluxun.effectivejava.chapter4.item22.constantinterface;
 
 // Constant interface antipattern - do not use!
+
+/**
+ * 不要这样写，接口只用于定义类型
+ */
 public interface PhysicalConstants {
     // Avogadro's number (1/mol)
     static final double AVOGADROS_NUMBER = 6.022_140_857e23;

@@ -1,6 +1,10 @@
 package com.geekluxun.effectivejava.chapter4.item17;
 
 // Immutable complex number class (Pages 81-82)
+
+/**
+ * 不可变类
+ */
 public final class Complex {
     private final double re;
     private final double im;

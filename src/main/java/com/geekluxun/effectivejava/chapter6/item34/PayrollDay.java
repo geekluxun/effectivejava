@@ -4,6 +4,10 @@ import static com.geekluxun.effectivejava.chapter6.item34.PayrollDay.PayType.WEE
 import static com.geekluxun.effectivejava.chapter6.item34.PayrollDay.PayType.WEEKEND;
 
 // The strategy enum pattern (Page 166)
+
+/**
+ * 枚举的一个字段又是另一个枚举
+ */
 enum PayrollDay {
     MONDAY(WEEKDAY), TUESDAY(WEEKDAY), WEDNESDAY(WEEKDAY),
     THURSDAY(WEEKDAY), FRIDAY(WEEKDAY),

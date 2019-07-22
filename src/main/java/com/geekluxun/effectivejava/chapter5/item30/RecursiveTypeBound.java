@@ -12,7 +12,15 @@ import java.util.Objects;
  */
 public class RecursiveTypeBound {
     // Returns max value in a collection - uses recursive type bound
-    public static <E extends Comparable<E>> E max(Collection<E> c) {
+
+    /**
+     * 这里使用"E extends Comparable<E>",是为了要求元素E是可比较的
+     *
+     * @param c
+     * @param <E>
+     * @return
+     */
+    public static <E extends Comparable<? super E >> E max(Collection<E> c) {
         if (c.isEmpty())
             throw new IllegalArgumentException("Empty collection");
 
@@ -25,7 +33,7 @@ public class RecursiveTypeBound {
     }
 
     public static void main(String[] args) {
-        List<String> argList = Arrays.asList(args);
+        List<String> argList = Arrays.asList("1", "3", "8", "2", "5");
         System.out.println(max(argList));
     }
 }

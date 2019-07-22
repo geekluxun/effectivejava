@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 // Shows the need for overriding hashcode when you override equals (Pages 50-53 )
+
+/**
+ * 覆盖equal方式时候必须覆盖hashcode方法（否则和基于和那些基于散列的集合不能一起正常工作（HashMap HashSet））
+ */
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 

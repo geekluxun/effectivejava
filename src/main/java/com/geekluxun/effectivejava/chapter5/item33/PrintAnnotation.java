@@ -2,6 +2,7 @@ package com.geekluxun.effectivejava.chapter5.item33;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedElement;
+import java.util.function.Function;
 
 // Use of asSubclass to safely cast to a bounded type token (Page 155)
 public class PrintAnnotation {
@@ -19,13 +20,15 @@ public class PrintAnnotation {
 
     // Test program to print named annotation of named class
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            System.out.println(
-                    "Usage: java PrintAnnotation <class> <annotation>");
-            System.exit(1);
-        }
-        String className = args[0];
-        String annotationTypeName = args[1];
+//        if (args.length != 2) {
+//            System.out.println(
+//                    "Usage: java PrintAnnotation <class> <annotation>");
+//            System.exit(1);
+//        }
+        String className;
+        String annotationTypeName;
+        className = "java.util.function.Function";
+        annotationTypeName = "java.lang.FunctionalInterface";
         Class<?> klass = Class.forName(className);
         System.out.println(getAnnotation(klass, annotationTypeName));
     }

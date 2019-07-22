@@ -32,6 +32,11 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
         return addCount;
     }
 
+    /**
+     * addAll内部是调用add，所以加了6次
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         InstrumentedHashSet<String> s = new InstrumentedHashSet<>();
         s.addAll(List.of("Snap", "Crackle", "Pop"));

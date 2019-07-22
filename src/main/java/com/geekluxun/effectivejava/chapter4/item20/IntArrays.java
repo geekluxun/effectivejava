@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Objects;
 
 // Concrete implementation built atop skeletal implementation (Page 101)
+
+/**
+ * AbstractList是骨架实现类，是模板方法
+ */
 public class IntArrays {
     static List<Integer> intArrayAsList(int[] a) {
         Objects.requireNonNull(a);
@@ -38,6 +42,7 @@ public class IntArrays {
             a[i] = i;
 
         List<Integer> list = intArrayAsList(a);
+        // 随便打乱
         Collections.shuffle(list);
         System.out.println(list);
     }

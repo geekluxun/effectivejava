@@ -6,6 +6,12 @@ import java.util.List;
 import java.util.Set;
 
 // Wrapper class - uses composition in place of inheritance  (Page 90)
+
+/**
+ * 是一个包装类，使用了装饰者模式
+ *
+ * @param <E>
+ */
 public class InstrumentedSet<E> extends ForwardingSet<E> {
     private int addCount = 0;
 

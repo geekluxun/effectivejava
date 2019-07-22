@@ -46,6 +46,7 @@ public enum Phase {
 
     // Simple demo program - prints a sloppy table
     public static void main(String[] args) {
+        Map enumMap = new EnumMap<>(Phase.class);
         for (Phase src : Phase.values()) {
             for (Phase dst : Phase.values()) {
                 Transition transition = Transition.from(src, dst);

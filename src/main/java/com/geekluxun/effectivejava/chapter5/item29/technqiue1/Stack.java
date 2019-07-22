@@ -6,6 +6,11 @@ import com.geekluxun.effectivejava.chapter5.item29.EmptyStackException;
 import java.util.Arrays;
 
 // Generic stack using E[] (Pages 130-3)
+
+/**
+ * 优先考虑泛型
+ * @param <E>
+ */
 public class Stack<E> {
     private E[] elements;
     private int size = 0;
