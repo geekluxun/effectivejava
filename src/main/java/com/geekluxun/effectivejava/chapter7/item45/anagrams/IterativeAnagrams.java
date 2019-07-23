@@ -14,6 +14,14 @@ public class IterativeAnagrams {
         try (Scanner s = new Scanner(dictionary)) {
             while (s.hasNext()) {
                 String word = s.next();
+                /**
+                 *  if (map.get(key) == null) {
+                 *      V newValue = mappingFunction.apply(key);
+                 *      if (newValue != null)
+                 *          map.put(key, newValue);
+                 *  }
+                 * 
+                 */
                 groups.computeIfAbsent(alphabetize(word),
                         (unused) -> new TreeSet<>()).add(word);
             }
@@ -24,6 +32,11 @@ public class IterativeAnagrams {
                 System.out.println(group.size() + ": " + group);
     }
 
+    /**
+     * 按字母序排列
+     * @param s
+     * @return
+     */
     private static String alphabetize(String s) {
         char[] a = s.toCharArray();
         Arrays.sort(a);
